@@ -1,6 +1,6 @@
 backend:
-  name: git-gateway
-  repo: # Repo name here like eg: LasseKrarup/reponame
+  name: github
+  repo: LasseKrarup/ember-music-collective
   branch: main
 
 media_folder: static/img
@@ -13,13 +13,28 @@ editor:
 # Collections
 # https://www.netlifycms.org/docs/collection-types/
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
+  - name: "artists"
+    label: "Artists"
+    label_singular: "Ember Local Artist"
+    folder: "content/artists"
+    path: "{{slug}}/index"
     create: true
-    slug: "{{day}}{{month}}{{year}}-{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
+      - { label: "Cover image", name: "image", widget: "image"}
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "program"
+    label: "Emberfest Program"
+    label_singular: "Emberfest Artist"
+    folder: "content/program"
+    path: "{{slug}}/index"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Show start", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Cover image", name: "image", widget: "image"}
       - { label: "Body", name: "body", widget: "markdown" }
