@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  repo: # Repo name here like eg: LasseKrarup/reponame
+  branch: main
+
+media_folder: static/img
+public_folder: /img
+
+# Disables preview editor
+editor:
+  preview: false
+
+# Collections
+# https://www.netlifycms.org/docs/collection-types/
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{day}}{{month}}{{year}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
