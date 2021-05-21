@@ -60,6 +60,7 @@ module.exports = {
     // Sharp image plugin
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    "gatsby-plugin-image",
 
     // PWA manifest and Favicon stuff
     {
