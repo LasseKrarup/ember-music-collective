@@ -16,51 +16,51 @@
 **/
 
 // --- Slug generation for Markdown Remark ----
-// const path = require(`path`)
-// const { createFilePath } = require(`gatsby-source-filesystem`)
+const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
-// exports.onCreateNode = ({ node, getNode, actions }) => {
-//   const { createNodeField } = actions
-//   if (node.internal.type === `MarkdownRemark`) {
-//     const slug = createFilePath({ node, getNode, basePath: `pages` })
-//     createNodeField({
-//       node,
-//       name: `slug`,
-//       value: slug,
-//     })
-//   }
-// }
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
+  }
+}
 
-// exports.createPages = async ({ graphql, actions }) => {
-//   const { createPage } = actions
-//   // This is where the files for which to generate slugs are determined
-//   const result = await graphql(`
-//     query {
-//       allMarkdownRemark (filter: {internal: {}, fileAbsolutePath: {glob: "/**/pages/*"}}) {
-//         edges {
-//           node {
-//             fields {
-//               slug
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `)
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  // This is where the files for which to generate slugs are determined
+  const result = await graphql(`
+    query {
+      allMarkdownRemark (filter: {internal: {}, fileAbsolutePath: {glob: "/**/pages/**/*"}}) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
 
-//   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-//     createPage({
-//       path: node.fields.slug,
-//       // Choose template to use for programatically created pages
-//       component: path.resolve(`./src/templates/other-pages.js`),
-//       context: {
-//         // Data passed to context is available
-//         // in page queries as GraphQL variables.
-//         slug: node.fields.slug,
-//       },
-//     })
-//   })
-// }
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      // Choose template to use for programatically created pages
+      component: path.resolve(`./src/templates/bands.js`),
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        slug: node.fields.slug,
+      },
+    })
+  })
+}
 
 
 
