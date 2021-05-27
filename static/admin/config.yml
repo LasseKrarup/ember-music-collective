@@ -6,6 +6,13 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dweugxhek
+    api_key: 166937136244822
+    multiple: true
+
 # Disables preview editor
 editor:
   preview: false
@@ -16,19 +23,27 @@ collections:
   - name: "artists"
     label: "Artists"
     label_singular: "Ember Local Artist"
-    folder: "content/artists"
+    folder: "content/pages/artists"
     path: "{{slug}}/index"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Cover image", name: "image", widget: "image"}
+      - label: "Cover image"
+        name: "cover"
+        widget: "image"
+        media_library:
+          config:
+            multiple: false
+      - label: "Images"
+        name: "images"
+        widget: "image"
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "program"
     label: "Emberfest Program"
     label_singular: "Emberfest Artist"
-    folder: "content/program"
+    folder: "content/pages/program"
     path: "{{slug}}/index"
     create: true
     fields:

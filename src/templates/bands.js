@@ -8,6 +8,10 @@ export default function BandTemplate({ data }) {
     <Layout>
       <div>
         <h1>{post.frontmatter.title}</h1>
+        <i>{post.frontmatter.date}</i>
+        {post.frontmatter.images.map( (item, index) => (
+          <img src={item} key={index} alt={post.frontmatter.title} />
+        ))}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
@@ -19,6 +23,8 @@ export const query = graphql`
       html
       frontmatter {
         title
+        images
+        date
       }
     }
   }
