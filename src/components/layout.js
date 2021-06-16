@@ -10,11 +10,13 @@ import PropTypes from "prop-types"
 
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, header }) => {
 
   return (
     <div className="flex flex-col min-h-screen">
-        <header className="w-full absolute top-0"></header>
+        <header className="w-full absolute top-0">
+          {header}
+        </header>
         <main className="flex flex-col items-center flex-grow">{children}</main>
         <footer className="mt-12 self-center text-gray-400">
           © {new Date().getFullYear()}

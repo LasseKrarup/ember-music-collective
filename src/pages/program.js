@@ -5,9 +5,11 @@ import SEO from "../components/seo"
 import { graphql, Link } from "gatsby"
 import EmberColour from "../images/EmberColour.svg"
 
+import moment from "moment"
+
 const IndexPage = ({data}) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Line Up" />
     <img src={EmberColour} alt="Ember Logo" className="w-16 mt-4"></img>
 
     <h1 className="font-logo text-xl">EMBERFEST</h1>
@@ -18,12 +20,12 @@ const IndexPage = ({data}) => (
 
     <div className="">
         {data.allMarkdownRemark.edges.map( (item, index) => (
-        <Link to={item.node.fields.slug} className="lowercase">
-            <div className="relative grid w-52 transition-all opacity-100 hover:opacity-90 hover:text-gray-700" key={index}>
-                <img className="col-span-2 object-cover h-52 mb-2" src={item.node.frontmatter.cover} alt={item.node.frontmatter.title} />
+        <Link to={item.node.fields.slug} key={item.node.fields.slug} className="lowercase">
+            <div className="relative grid w-52 transition-all opacity-100 hover:opacity-90 hover:text-gray-700 mb-8">
+                <img className="col-span-2 object-cover h-52 mb-2" src={item.node.frontmatter.image} alt={item.node.frontmatter.title} />
                 
                 <span className="">{item.node.frontmatter.title}</span>
-                <span className="text-right">14:00</span>
+                <span className="text-right">{moment(item.node.frontmatter.showstart).format("HH:mm")}</span>
             </div>
         </Link>
         ))}
@@ -35,21 +37,21 @@ const IndexPage = ({data}) => (
 
 export const query = graphql`
 query ProgramQuery {
-  allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/pages/artists/**/*"}}) {
-    edges {
-      node {
-        frontmatter {
-          cover
-          description
-          images
-          title
-        }
-        fields {
-          slug
+    allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/pages/program/**/*"}}, sort: {fields: frontmatter___showstart}) {
+      edges {
+        node {
+          frontmatter {
+            description
+            image
+            title
+            showstart
+          }
+          fields {
+            slug
+          }
         }
       }
     }
-  }
-}
+  }  
 `
 export default IndexPage

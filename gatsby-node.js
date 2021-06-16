@@ -49,10 +49,14 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    let templatePath = "./src/templates/bands.js"
+    if (/\/program\//g.test(node.fields.slug)) {
+      templatePath = "./src/templates/emberfest-bands.js"
+    }
     createPage({
       path: node.fields.slug,
       // Choose template to use for programatically created pages
-      component: path.resolve(`./src/templates/bands.js`),
+      component: path.resolve(templatePath),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.

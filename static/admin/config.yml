@@ -48,7 +48,7 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Show start", name: "showstart", widget: "datetime" }
+      - { label: "Show start", name: "showstart", widget: "datetime", date_format: "DD. MMMM YYYY", time_format: "HH:mm" }
       - { label: "Tag line (short description)", name: "description", widget: "string" }
       - label: "Image"
         name: "image"
