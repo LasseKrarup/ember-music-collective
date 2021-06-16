@@ -7,3 +7,5 @@
 // You can delete this file if you're not using it
 
 import "./src/css/style.css"
+import "@fontsource/chakra-petch"
+import "@fontsource/fira-sans/200.css"

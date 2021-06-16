@@ -7,36 +7,21 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
 import "./layout.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
 
   return (
-    <>
-      <div
-        className="my-0 mx-auto max-w-screen-lg py-0 pl-4 pr-6 text-white"
-      >
-        <main>{children}</main>
-        <footer style={{
-          marginTop: `2rem`
-        }}>
+    <div className="flex flex-col min-h-screen">
+        <header className="w-full absolute top-0"></header>
+        <main className="flex flex-col items-center flex-grow">{children}</main>
+        <footer className="mt-12 self-center text-gray-400">
           © {new Date().getFullYear()}
           {` `}
           <a href="https://www.lassekrarup.com">Lasse Krarup</a>
         </footer>
-      </div>
-    </>
+    </div>
   )
 }
 

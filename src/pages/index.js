@@ -2,44 +2,26 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { StaticImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+import EmberColour from "../images/EmberColour.svg"
 
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
-    <h1>under construction</h1>
-    <StaticImage src="../images/emberlogo.png" alt="Ember Logo" placeholder="blurred"></StaticImage>
+    <img src={EmberColour} alt="Ember Logo" className="w-28 mt-12"></img>
 
-  <h2>Concerts:</h2>
-    {data.allMarkdownRemark.edges.map( (item, index) => (
-      <p key={index}>
-        <a href={item.node.fields.slug}>{item.node.frontmatter.title}</a>
-        <img src={item.node.frontmatter.cover} alt={item.node.frontmatter.title} />
-      </p>
-    ))}
+    <h1 className="font-logo text-5xl mb-3">EMBERFEST</h1>
+    <h2 className="text-lg text-disabled">4. september 13:00-24:00</h2>
+    <h3 className="text-sm text-disabled">Tage Hansens Gade 2a, 9</h3>
+
+    <div className="mt-12">
+      <ul className="list-none uppercase text-2xl text-center">
+        <li className="mb-4"><Link to="/program/">Line up</Link></li>
+        <li>Event</li>
+      </ul>
+    </div>
 
   </Layout>
 )
 
-
-export const query = graphql`
-query MyQuery {
-  allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/pages/artists/**/*"}}) {
-    edges {
-      node {
-        frontmatter {
-          cover
-          description
-          images
-          title
-        }
-        fields {
-          slug
-        }
-      }
-    }
-  }
-}
-`
 export default IndexPage

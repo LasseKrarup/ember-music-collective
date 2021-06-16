@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Lasse Krarup <me@lassekrarup.com>",
   "dependencies": {
+    "@fontsource/chakra-petch": "^4.4.5",
+    "@fontsource/fira-sans": "^4.4.5",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.6.0",
     "gatsby-plugin-image": "^1.6.0",
