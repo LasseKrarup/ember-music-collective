@@ -20,11 +20,20 @@ module.exports = {
       },
       textColor: {
         "disabled": "#707070"
+      },
+      width: {
+        "800": "800px"
+      },
+      height: {
+        "400": "400px"
       }
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      margin: ["last"],
+      padding: ["last"]
+    },
   },
   plugins: [],
 }

@@ -1,3 +1,7 @@
 p {
     @apply pb-4;
 }
+
+p:last-child {
+    @apply pb-0;
+}

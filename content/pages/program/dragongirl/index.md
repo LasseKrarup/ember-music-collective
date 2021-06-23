@@ -2,7 +2,7 @@
 title: Dragongirl
 showstart: 2021-09-04T22:00:00.000+02
 description: Experimental trance (DK)
-image: https://picsum.photos/600/
+image: https://picsum.photos/600/400/
 ---
 Put a bird on it meh neutra vexillologist farm-to-table locavore. Flannel portland neutra forage glossier. Marfa taiyaki forage bicycle rights YOLO ethical, blog mumblecore tote bag shoreditch shaman food truck pitchfork stumptown bespoke. Mustache letterpress skateboard put a bird on it typewriter, succulents raw denim helvetica.
 
