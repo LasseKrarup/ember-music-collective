@@ -60,7 +60,7 @@ const IndexPage = ({data}) => {
                 textClass = "lg:text-right lg:justify-end lg:mr-16"
               }
 
-              const showStart = item.node.frontmatter.showstart !== null ? moment(item.node.frontmatter.showstart).format("HH:mm") : "tba"
+              const showStart = item.node.frontmatter.showstart !== "" ? moment(item.node.frontmatter.showstart).format("HH:mm") : "tba"
 
               
               return (

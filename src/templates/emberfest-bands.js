@@ -21,7 +21,7 @@ const Header = () => {
 export default function BandTemplate({ data }) {
   const post = data.markdownRemark
   const metaData = data.site.siteMetadata
-  const showTime = post.frontmatter.showstart !== null ? moment(post.frontmatter.showstart).format("HH:mm") : "tba"
+  const showTime = post.frontmatter.showstart !== "" ? moment(post.frontmatter.showstart).format("HH:mm") : "tba"
   return (
     <Layout header={<Header />}>
       <SEO title={post.frontmatter.title} />
