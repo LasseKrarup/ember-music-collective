@@ -1,5 +1,7 @@
 backend:
   name: git-gateway
+  repo: https://github.com/LasseKrarup/ember-music-collective
+  branch: main
 
 media_folder: static/img
 public_folder: /img
