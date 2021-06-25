@@ -16,5 +16,5 @@ import {AnimatePresence} from 'framer-motion';
 export const shouldUpdateScroll = () => {return false};
 
 export const wrapPageElement = ({element}) => (
-  <AnimatePresence initial={false} exitBeforeEnter>{element}</AnimatePresence>
+  <AnimatePresence exitBeforeEnter>{element}</AnimatePresence>
 );

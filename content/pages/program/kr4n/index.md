@@ -1,6 +1,5 @@
 ---
 title: Kr4n
-showstart: 2021-09-04T14:00:00.000+02
 description: Electronic duo (DK)
 image: https://picsum.photos/600/380
 ---

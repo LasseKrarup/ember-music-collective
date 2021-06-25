@@ -7,6 +7,8 @@ import EmberColour from "../images/EmberColour.svg"
 import { motion } from "framer-motion"
 import Pane from "../components/pane"
 
+import FacebookIcon from '@material-ui/icons/Facebook';
+
 const IndexPage = ({data}) => {
   const metaData = data.site.siteMetadata
 
@@ -53,8 +55,8 @@ const IndexPage = ({data}) => {
 
       <div className="mt-12 sm:mt-24">
         <motion.ul variants={variantsParent} initial="initial" animate="animate" className="list-none uppercase text-2xl md:text-4xl text-center">
-          <motion.li variants={variantsChildren} className="mb-4"><Link to="/program/">Line up</Link></motion.li>
-          <motion.li variants={variantsChildren}>Event</motion.li>
+          <motion.li variants={variantsChildren} className="mb-4 hover:opacity-75 transition-opacity"><Link to="/program/">Line up</Link></motion.li>
+          <motion.li variants={variantsChildren} className="hover:opacity-75 transition-opacity"><a className="flex items-center" href="https://www.facebook.com/events/1623845561141329" target="_blank" rel="noreferrer">Event&nbsp;<FacebookIcon /></a></motion.li>
         </motion.ul>
       </div>
 

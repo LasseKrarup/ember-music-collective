@@ -6,10 +6,32 @@ import { graphql, Link } from "gatsby"
 import EmberColour from "../images/EmberColour.svg"
 
 import moment from "moment"
+import { motion } from "framer-motion"
 import Pane from "../components/pane"
 
 const IndexPage = ({data}) => {
   const metaData = data.site.siteMetadata
+
+  const variantsContainer = {
+    animate: {
+      transition: {
+        staggerChildren: 0.25,
+        delayChildren: 2,
+      }
+    }
+  }
+
+  const variantsChild = {
+    initial: {
+      opacity: 0,
+      x: "100px"
+    },
+    animate: {
+      opacity: 1,
+      x: 0
+    }
+  }
+
   return(
     <Layout>
       <SEO title="Line Up" />
@@ -27,9 +49,9 @@ const IndexPage = ({data}) => {
       <h1 className="text-2xl uppercase mt-8 lg:mt-16 mb-4 md:text-5xl">LINE UP</h1>
 
       <div className="lg:flex lg:flex-col relative">
-          <div className="hidden lg:block border-r w-0 border-gray-400 h-full absolute left-1/2 transform -translate-x-1/2 z-0"></div>
+          <motion.div initial={{height: 0}} animate={{height: "100%"}} transition={{delay: 1, duration: 1.5}} className="hidden lg:block border-r w-0 border-gray-400 absolute left-1/2 transform -translate-x-1/2 z-0"></motion.div> {/* VERTICAL LINE */}
 
-          <div className="py-16 z-10">
+          <motion.div variants={variantsContainer} initial="initial" animate="animate" className="py-16 z-10">
             {data.allMarkdownRemark.edges.map( (item, index) => {
               let imgClass = ""
               let textClass = ""
@@ -38,18 +60,23 @@ const IndexPage = ({data}) => {
                 textClass = "lg:text-right lg:justify-end lg:mr-16"
               }
 
+              const showStart = item.node.frontmatter.showstart !== null ? moment(item.node.frontmatter.showstart).format("HH:mm") : "tba"
+
+              
               return (
                 <Link to={item.node.fields.slug} key={item.node.fields.slug} className="lowercase block mb-8 sm:mb-16 last:mb-0">
                     <div className="grid lg:grid-cols-2 w-52 sm:w-72 md:w-96 lg:w-800 lg:mx-auto transition-all opacity-100 hover:opacity-90 hover:text-gray-700 sm:text-lg md:text-xl lg:text-3xl">
-                        <img className={"col-span-2 lg:col-span-1 lg:row-span-2 object-cover h-52 sm:h-72 md:h-96 lg:h-400 mb-2 lg:mb-0 " + imgClass} src={item.node.frontmatter.image} alt={item.node.frontmatter.title} />
+                        <div className={"col-span-2 lg:col-span-1 lg:row-span-2 mb-2 lg:mb-0 overflow-hidden " + imgClass}>
+                          <motion.img variants={variantsChild} className="object-cover h-52 sm:h-72 md:h-96 lg:h-400" src={item.node.frontmatter.image} alt={item.node.frontmatter.title}></motion.img>
+                        </div>
                         
-                        <span className={"lg:flex items-end justify lg:ml-16 lg:order-1 " + textClass}>{item.node.frontmatter.title}</span>
-                        <span className={"text-right lg:text-left lg:ml-16 lg:order-last " + textClass}>{moment(item.node.frontmatter.showstart).format("HH:mm")}</span>
+                        <motion.span variants={variantsChild} className={"lg:flex items-end justify lg:ml-16 lg:order-1 " + textClass}>{item.node.frontmatter.title}</motion.span>
+                        <motion.span variants={variantsChild} className={"text-right lg:text-left lg:ml-16 lg:order-last " + textClass}>{showStart}</motion.span>
                     </div>
                 </Link>
               )
             })}
-          </div>
+          </motion.div>
       </div>
 
       

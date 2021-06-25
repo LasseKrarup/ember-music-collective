@@ -1,6 +1,5 @@
 ---
 title: Dragongirl
-showstart: 2021-09-04T22:00:00.000+02
 description: Experimental trance (DK)
 image: https://picsum.photos/600/400/
 ---

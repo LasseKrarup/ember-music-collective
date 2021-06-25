@@ -2,7 +2,7 @@
   "name": "ember-music-collective",
   "private": true,
   "description": "Gatsby Jamstack site for Ember Music Collective",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Lasse Krarup <me@lassekrarup.com>",
   "dependencies": {
     "@fontsource/chakra-petch": "^4.4.5",
