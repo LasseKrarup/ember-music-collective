@@ -1,7 +1,5 @@
 backend:
-  name: github
-  repo: LasseKrarup/ember-music-collective
-  branch: main
+  name: git-gateway
 
 media_folder: static/img
 public_folder: /img
@@ -9,8 +7,8 @@ public_folder: /img
 media_library:
   name: cloudinary
   config:
-    cloud_name: dweugxhek
-    api_key: 166937136244822
+    cloud_name: embermusic-dk
+    api_key: 871611657891839
     multiple: true
 
 # Disables preview editor
