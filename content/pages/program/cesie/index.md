@@ -1,7 +1,7 @@
 ---
 title: CESIE
 showstart: ""
-description: Beautiful dusty singer/songwriter
+description: Singer/songwriter
 image:
   - https://res.cloudinary.com/embermusic-dk/image/upload/v1624622782/CESISE_kck5wm.jpg
 ---
