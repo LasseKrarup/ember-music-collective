@@ -3,7 +3,7 @@ title: Dragongirl
 showstart: ""
 description: Experimental trance (DK)
 image:
-  - https://res.cloudinary.com/embermusic-dk/image/upload/v1624693271/DRAGONGIRL_WillaWathne_Comp_w7t0z9.jpg
+  - DRAGONGIRL_WillaWathne_Comp_w7t0z9.jpg
 ---
 Composer and producer Nikoline Ursin Erichsen, alias dragongirl, works at the intersection of club music, contemporary music and performance art. dragongirl composes from the idea of music as a speculative medium, and draws inspiration from literary fantasy, horror movies and video games all the while having a strong idealism as a base. 
 

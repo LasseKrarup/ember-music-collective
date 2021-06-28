@@ -47,7 +47,7 @@ const IndexPage = ({data}) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <img src={EmberColour} alt="Ember Logo" className="w-28 mt-12 sm:mt-24 md:w-64"></img>
+      <img src={EmberColour} width="600" height="600" alt="Ember Logo" className="w-28 mt-12 sm:mt-24 md:w-64"></img>
 
       <h1 className="font-logo text-5xl md:text-7xl mb-3 pointer-events-none">EMBERFEST</h1>
       <div className="overflow-hidden"><motion.h2 initial={textInitial} animate={textAnimate} transition={textTransition} className="text-lg md:text-2xl text-disabled">{metaData.emberDate}</motion.h2></div>

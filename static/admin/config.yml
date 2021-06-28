@@ -56,4 +56,5 @@ collections:
         media_library:
           config:
             multiple: false
+          output_filename_only: true
       - { label: "Bio", name: "body", widget: "markdown" }

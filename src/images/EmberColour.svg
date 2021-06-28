@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="24.04492mm"
-   height="31.056641mm"
-   viewBox="0 0 24.04492 31.056641"
+   width="117.37943"
+   height="117.37943"
+   viewBox="0 0 31.056641 31.056641"
    version="1.1"
    id="svg392"
-   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
-   sodipodi:docname="EmberColour.svg">
+   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+   sodipodi:docname="EmberColour.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs386">
     <linearGradient
@@ -156,8 +156,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.959798"
-     inkscape:cx="32.685953"
-     inkscape:cy="67.969544"
+     inkscape:cx="32.577419"
+     inkscape:cy="68.059027"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -168,9 +168,12 @@
      fit-margin-bottom="0"
      inkscape:window-width="1496"
      inkscape:window-height="1030"
-     inkscape:window-x="0"
+     inkscape:window-x="194"
      inkscape:window-y="37"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="0"
+     inkscape:pagecheckerboard="0"
+     units="px"
+     height="117.37943px" />
   <metadata
      id="metadata389">
     <rdf:RDF>
@@ -179,7 +182,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -190,7 +192,7 @@
      transform="translate(-149.75135,-119.0312)">
     <g
        id="g1378"
-       transform="translate(-13.8812,-310.96332)">
+       transform="translate(-10.375339,-310.96332)">
       <path
          id="path1218"
          d="m 173.02122,435.74843 -3.03125,11.3125 2.45703,10.58398 0.38868,0.006 3.02734,-11.29883 -0.0137,-0.0508 z"

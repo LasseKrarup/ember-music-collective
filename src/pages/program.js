@@ -9,6 +9,8 @@ import moment from "moment"
 import { motion } from "framer-motion"
 import Pane from "../components/pane"
 
+const path = require("path");
+
 const IndexPage = ({data}) => {
   const metaData = data.site.siteMetadata
 
@@ -16,7 +18,7 @@ const IndexPage = ({data}) => {
     animate: {
       transition: {
         staggerChildren: 0.25,
-        delayChildren: 2,
+        delayChildren: 1.15,
       }
     }
   }
@@ -49,7 +51,7 @@ const IndexPage = ({data}) => {
       <h1 className="text-2xl uppercase mt-8 lg:mt-16 mb-4 md:text-5xl">LINE UP</h1>
 
       <div className="lg:flex lg:flex-col relative">
-          <motion.div initial={{height: 0}} animate={{height: "100%"}} transition={{delay: 1, duration: 1.5}} className="hidden lg:block border-r w-0 border-gray-400 absolute left-1/2 transform -translate-x-1/2 z-0"></motion.div> {/* VERTICAL LINE */}
+          <motion.div initial={{height: 0}} animate={{height: "100%"}} transition={{delay: 0.8, duration: 1.5}} className="hidden lg:block border-r w-0 border-gray-400 absolute left-1/2 transform -translate-x-1/2 z-0"></motion.div> {/* VERTICAL LINE */}
 
           <motion.div variants={variantsContainer} initial="initial" animate="animate" className="py-16 z-10">
             {data.allMarkdownRemark.edges.map( (item, index) => {
@@ -61,13 +63,26 @@ const IndexPage = ({data}) => {
               }
 
               const showStart = item.node.frontmatter.showstart !== "" ? moment(item.node.frontmatter.showstart).format("HH:mm") : "tba"
-
+              const image = item.node.frontmatter.image[0]
+              const cld = "https://res.cloudinary.com/embermusic-dk/image/upload/"
               
               return (
                 <Link to={item.node.fields.slug} key={item.node.fields.slug} className="lowercase block mb-8 sm:mb-16 last:mb-0">
                     <div className="grid lg:grid-cols-2 w-52 sm:w-72 md:w-96 lg:w-800 lg:mx-auto transition-all opacity-100 hover:opacity-90 hover:text-gray-700 sm:text-lg md:text-xl lg:text-3xl">
                         <div className={"col-span-2 lg:col-span-1 lg:row-span-2 mb-2 lg:mb-0 overflow-hidden " + imgClass}>
-                          <motion.img variants={variantsChild} className="object-cover h-52 sm:h-72 md:h-96 lg:h-400" src={item.node.frontmatter.image} alt={item.node.frontmatter.title}></motion.img>
+                          <motion.img variants={variantsChild}
+                            className="object-cover w-52 sm:w-72 md:w-400 h-52 sm:h-72 md:h-400" 
+                            sizes="(min-width: 768px) 384px, (min-width: 640px) 288px, 208px"
+                            srcSet={`
+                              ${cld}c_fill,w_208,h_208/${image} 208w,
+                              ${cld}c_fill,w_288,h_288/${image} 288w,
+                              ${cld}c_fill,w_400,h_400/${image} 400w,
+                              ${cld}c_fill,w_576,h_576/${image} 576w,
+                              ${cld}c_fill,w_800,h_800/${image} 800w,
+                            `}
+                            src={path.join(cld, "c_fill,w_400,h_400", image)} 
+                            alt={item.node.frontmatter.title}>
+                          </motion.img>
                         </div>
                         
                         <motion.span variants={variantsChild} className={"lg:flex items-end justify lg:ml-16 lg:order-1 " + textClass}>{item.node.frontmatter.title}</motion.span>
