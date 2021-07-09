@@ -3,6 +3,8 @@ title: CESIE
 showstart: ""
 description: Singer/songwriter
 image:
-  - https://res.cloudinary.com/embermusic-dk/image/upload/v1624622782/CESISE_kck5wm.jpg
+  - CESISE_kck5wm.jpg
 ---
-Duo setup with Mathias Winther. More info to come.
+CESIE er en engelsksproget singer/songwriter, dedikeret til at skrive poetisk livsrefererende lyrik med et simpelt og organisk lydunivers. 
+
+Nerven og sårbarheden i hendes vokal bliver eksempelvis udtrykt i udforskende melismer. Hendes britiske talerør samt umiddelbarhed og naturlighed i musikken skaber et rum med autencitet og nærvær.
