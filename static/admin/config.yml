@@ -8,6 +8,7 @@ public_folder: /img
 
 media_library:
   name: cloudinary
+  output_filename_only: true
   config:
     cloud_name: embermusic-dk
     api_key: 871611657891839
@@ -56,5 +57,4 @@ collections:
         media_library:
           config:
             multiple: false
-          output_filename_only: true
       - { label: "Bio", name: "body", widget: "markdown" }
