@@ -1,7 +1,7 @@
 ---
 title: Clapper
 showstart: ""
-description: Jazz / fusion
+description: Hip-hop Jazz / Neo-soul jazz
 image:
   - received_229219025583960_rijdlm.jpg
 ---
