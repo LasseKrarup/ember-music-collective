@@ -1,6 +1,6 @@
 ---
 title: Kr4n
-showstart: ""
+showstart: 2021-09-04T20:30:00.000Z
 description: Elektronisk duo
 image:
   - kr4n_qikicv.jpg
