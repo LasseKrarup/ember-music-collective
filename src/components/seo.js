@@ -45,6 +45,10 @@ function SEO({ description, lang, meta, title }) {
           content: title,
         },
         {
+          property: `og:image`,
+          content: "https://res.cloudinary.com/embermusic-dk/image/upload/v1627466703/g1462_1_emwwxn.png",
+        },
+        {
           property: `og:description`,
           content: metaDescription,
         },
