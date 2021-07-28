@@ -1,6 +1,6 @@
 ---
 title: d ø t r e
-showstart: ""
+showstart: 2021-09-04T16:00:00.000Z
 description: ambient elektronisk pop
 image:
   - dotre_pr_omc7ui.jpg
