@@ -1,6 +1,6 @@
 ---
 title: døssing
-showstart: ""
+showstart: 2021-09-04T17:30:00.000Z
 description: Jazz / world
 image:
   - doessing2_kkakwa.jpg
