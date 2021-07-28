@@ -1,6 +1,6 @@
 ---
 title: CESIE
-showstart: ""
+showstart: 2021-09-04T11:30:00.000Z
 description: Singer/songwriter
 image:
   - CESISE_kck5wm.jpg
