@@ -13,7 +13,12 @@ import "@fontsource/fira-sans/200.css"
 import React from 'react';
 import {AnimatePresence} from 'framer-motion';
 
-export const shouldUpdateScroll = () => {return false};
+const transitionDelay = 600
+
+export const shouldUpdateScroll = () => false
+
+export const onRouteUpdate = () =>
+  window.setTimeout(() => window.scrollTo(0, 0), transitionDelay)
 
 export const wrapPageElement = ({element}) => (
   <AnimatePresence initial={false} exitBeforeEnter>{element}</AnimatePresence>
