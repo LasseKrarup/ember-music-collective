@@ -47,7 +47,7 @@ const IndexPage = ({data}) => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Emberfest Aarhus" />
       <img src={EmberColour} width="600" height="600" alt="Ember Logo" className="w-28 mt-12 sm:mt-24 md:w-64"></img>
 
       <h1 className="font-logo text-5xl md:text-7xl mb-3 pointer-events-none">EMBERFEST</h1>

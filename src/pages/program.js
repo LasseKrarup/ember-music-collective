@@ -36,7 +36,7 @@ const IndexPage = ({data}) => {
 
   return(
     <Layout>
-      <SEO title="Line Up" />
+      <SEO title="Emberfest Line Up" />
       <div className="flex flex-col lg:flex-row lg:w-full lg:pl-16"> {/* Logo hero thingy */}
         <Link to="/" className="flex flex-col items-center">
           <img src={EmberColour} alt="Ember Logo" className="w-16 sm:w-24 md:w-28 mt-4 sm:mt-8 md:mt-12"></img>
