@@ -47,10 +47,10 @@ const IndexPage = ({data}) => {
 
   return (
     <Layout>
-      <SEO title="Emberfest Aarhus" />
+      <SEO title="Emberfest Aarhus - Tak for i år!" />
       <img src={EmberColour} width="600" height="600" alt="Ember Logo" className="w-28 mt-12 sm:mt-24 md:w-64"></img>
 
-      <h1 className="font-logo text-5xl md:text-7xl mb-3 pointer-events-none">EMBERFEST</h1>
+      <h1 className="font-logo text-5xl text-center md:text-7xl mb-3 pointer-events-none">EMBERFEST<br /><span className="text-3xl md:text-5xl">Tak for i år! Vi ses i 2022</span></h1>
       <div className="overflow-hidden"><motion.h2 initial={textInitial} animate={textAnimate} transition={textTransition} className="text-lg md:text-2xl text-disabled">{metaData.emberDate}</motion.h2></div>
       <div className="overflow-hidden"><motion.h3 initial={textInitial} animate={textAnimate} transition={textTransition} className="text-sm md:text-lg text-disabled">{metaData.address}</motion.h3></div>
 
