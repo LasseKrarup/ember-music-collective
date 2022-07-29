@@ -1,17 +1,18 @@
 import React from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
 import { graphql, Link } from "gatsby"
-import EmberColour from "../images/EmberColour.svg"
+import EmberColour from "../../images/EmberColour.svg"
 import { motion } from "framer-motion"
-import Pane from "../components/pane"
+import Pane from "../../components/pane"
 
 import FacebookIcon from '@material-ui/icons/Facebook';
-import Paragraph from "../components/paragraph"
+import Paragraph from "../../components/paragraph"
 
 const IndexPage = ({data}) => {
-  const metaData = data.site.siteMetadata
+  let metaData = data.site.siteMetadata
+  metaData.emberDate = "4. september 12:00-24:00"
 
   const textInitial = {
     opacity: 0,
@@ -47,18 +48,17 @@ const IndexPage = ({data}) => {
 
   return (
     <Layout>
-      <SEO title="Emberfest Aarhus 2022" />
+      <SEO title="Emberfest Aarhus 2021" noindex />
       <img src={EmberColour} width="600" height="600" alt="Ember Logo" className="w-28 mt-12 sm:mt-24 md:w-64"></img>
 
-      <h1 className="font-logo text-5xl text-center md:text-7xl mb-3 pointer-events-none">EMBERFEST<br /><span className="text-3xl md:text-5xl">2022</span></h1>
+      <h1 className="font-logo text-5xl text-center md:text-7xl mb-3 pointer-events-none">EMBERFEST 2021<br /><span className="text-3xl md:text-5xl">Tak for i år! Vi ses i 2022</span></h1>
       <div className="overflow-hidden"><motion.h2 initial={textInitial} animate={textAnimate} transition={textTransition} className="text-lg md:text-2xl text-disabled">{metaData.emberDate}</motion.h2></div>
       <div className="overflow-hidden"><motion.h3 initial={textInitial} animate={textAnimate} transition={textTransition} className="text-sm md:text-lg text-disabled">{metaData.address}</motion.h3></div>
 
       <div className="mt-12 sm:mt-12">
         <motion.ul variants={variantsParent} initial="initial" animate="animate" className="list-none uppercase text-2xl md:text-4xl text-center">
           <motion.li variants={variantsChildren} className="mb-4 hover:opacity-75 transition-opacity"><Link to="program/">Line up</Link></motion.li>
-          <motion.li variants={variantsChildren} className="mb-4 hover:opacity-75 transition-opacity"><a className="flex items-center" href="https://www.facebook.com/events/1623845561141329" target="_blank" rel="noreferrer">Event&nbsp;<FacebookIcon /></a></motion.li>
-          <motion.li variants={variantsChildren} className="hover:opacity-75 transition-opacity"><Link to="2021">2021</Link></motion.li>
+          <motion.li variants={variantsChildren} className="hover:opacity-75 transition-opacity"><a className="flex items-center" href="https://www.facebook.com/events/1623845561141329" target="_blank" rel="noreferrer">Event&nbsp;<FacebookIcon /></a></motion.li>
         </motion.ul>
       </div>
 
@@ -81,7 +81,7 @@ const IndexPage = ({data}) => {
   )}
 
 export const query = graphql`
-query indexQuery {
+query indexQuery2021 {
     site {
       siteMetadata {
         emberDate

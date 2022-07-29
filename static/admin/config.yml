@@ -3,12 +3,13 @@ backend:
   repo: https://github.com/LasseKrarup/ember-music-collective
   branch: main
 
+local_backend: true
+
 media_folder: static/img
 public_folder: /img
 
 media_library:
   name: cloudinary
-  output_filename_only: true
   config:
     cloud_name: embermusic-dk
     api_key: 871611657891839
@@ -21,26 +22,6 @@ editor:
 # Collections
 # https://www.netlifycms.org/docs/collection-types/
 collections:
-  - name: "artists"
-    label: "Artists"
-    label_singular: "Ember Local Artist"
-    folder: "content/pages/artists"
-    path: "{{slug}}/index"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - label: "Cover image"
-        name: "cover"
-        widget: "image"
-        media_library:
-          config:
-            multiple: false
-      - label: "Images"
-        name: "images"
-        widget: "image"
-      - { label: "Body", name: "body", widget: "markdown" }
   - name: "program"
     label: "Emberfest Program"
     label_singular: "Emberfest Artist"

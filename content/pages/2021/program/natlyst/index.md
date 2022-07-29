@@ -3,7 +3,7 @@ title: Natlyst
 showstart: 2021-09-04T19:00:00.000Z
 description: avant-pop
 image:
-  - Natlyst_2018__ThereseVadum-5_tuwin5.jpg
+  - https://res.cloudinary.com/embermusic-dk/image/upload/v1627224708/Natlyst_2018__ThereseVadum-5_tuwin5.jpg
 ---
 Natlyst er et syvpersoners dansksproget, avant-pop orkester, som undersøger menneskets skrøbelighed og favner den i omsorg og ærlighed. Musikken fødes i forsanger/sangskriver Amanda Drews sårbarhed og gror i mødet mellem symfonisk storladenhed og elektronisk fremdrift. Live er Natlyst en syndflod af inderlighed, kaos, lyst og længsel. Med deres teatralske indlevelse tager de publikum i hånden og trækker dem fra sammenstødet med solen til faldet mod havet. 
 

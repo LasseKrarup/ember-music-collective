@@ -12,7 +12,7 @@ module.exports = {
     title: `Ember Music Collective`,
     description: `Ember Music Collective is a cultural hotspot for upcoming music in Aarhus, DK`,
     author: `LasseKrarup`,
-    emberDate: "4. september 12:00-24:00",
+    emberDate: "10. september 12:00-24:00",
     address: "Tage-Hansens Gade 2, 9a"
   },
   plugins: [

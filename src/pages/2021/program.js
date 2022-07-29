@@ -1,13 +1,13 @@
 import React from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
 import { graphql, Link } from "gatsby"
-import EmberColour from "../images/EmberColour.svg"
+import EmberColour from "../../images/EmberColour.svg"
 
 import moment from "moment"
 import { motion } from "framer-motion"
-import Pane from "../components/pane"
+import Pane from "../../components/pane"
 
 const path = require("path");
 
@@ -36,7 +36,7 @@ const IndexPage = ({data}) => {
 
   return(
     <Layout>
-      <SEO title="Emberfest Line Up" />
+      <SEO title="Emberfest Line Up 2021" noindex />
       <div className="flex flex-col lg:flex-row lg:w-full lg:pl-16"> {/* Logo hero thingy */}
         <Link to="/" className="flex flex-col items-center">
           <img src={EmberColour} alt="Ember Logo" className="w-16 sm:w-24 md:w-28 mt-4 sm:mt-8 md:mt-12"></img>
@@ -48,7 +48,7 @@ const IndexPage = ({data}) => {
         </div>
       </div>
 
-      <h1 className="text-2xl uppercase mt-8 lg:mt-16 mb-4 md:text-5xl">LINE UP</h1>
+      <h1 className="text-2xl uppercase mt-8 lg:mt-16 mb-4 md:text-5xl">LINE UP 2021</h1>
 
       <div className="lg:flex lg:flex-col relative">
           <motion.div initial={{height: 0}} animate={{height: "100%"}} transition={{delay: 0.8, duration: 1.5}} className="hidden lg:block border-r w-0 border-gray-400 absolute left-1/2 transform -translate-x-1/2 z-0"></motion.div> {/* VERTICAL LINE */}
@@ -62,9 +62,8 @@ const IndexPage = ({data}) => {
                 textClass = "lg:text-right lg:justify-end lg:mr-16"
               }
 
-              const showStart = item.node.frontmatter.showstart ? moment(item.node.frontmatter.showstart).format("HH:mm") : "tba"
+              const showStart = item.node.frontmatter.showstart !== "" ? moment(item.node.frontmatter.showstart).format("HH:mm") : "tba"
               const image = item.node.frontmatter.image[0].split("/upload/")[1]
-
               const cld = "https://res.cloudinary.com/embermusic-dk/image/upload/"
               
               return (
@@ -103,8 +102,8 @@ const IndexPage = ({data}) => {
 
 
 export const query = graphql`
-query ProgramQuery {
-    allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/pages/program/**/*"}}, sort: {fields: frontmatter___showstart}) {
+query ProgramQuery2021 {
+    allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/pages/2021/program/**/*"}}, sort: {fields: frontmatter___showstart}) {
       edges {
         node {
           frontmatter {

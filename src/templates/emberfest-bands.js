@@ -14,7 +14,7 @@ const path = require("path")
 
 const Header = () => {
   return(
-    <Link to="/program/">
+    <Link to="../">
       <ArrowBackIcon className="mt-4 ml-4 md:mt-8 md:ml-8 md:text-4xl opacity-50 hover:opacity-100 transition-opacity" />
     </Link>
   );
@@ -23,9 +23,12 @@ const Header = () => {
 export default function BandTemplate({ data }) {
   const post = data.markdownRemark
   const metaData = data.site.siteMetadata
-  const showTime = post.frontmatter.showstart !== "" ? moment(post.frontmatter.showstart).format("HH:mm") : "tba"
 
-  const image = post.frontmatter.image[0]
+  const showTime = post.frontmatter.showstart !== "" ? moment(post.frontmatter.showstart).format("HH:mm") : "tba"
+  const showDate = post.frontmatter.showstart !== "" ? moment(post.frontmatter.showstart).format("Do. MMMM YYYY") : ""
+  console.log(showDate)
+
+  const image = post.frontmatter.image[0].split("/upload/")[1]
   const cld = "https://res.cloudinary.com/embermusic-dk/image/upload/"
 
   return (
@@ -38,8 +41,8 @@ export default function BandTemplate({ data }) {
           <h2 className="font-logo text-xl sm:text-xl md:text-2xl lg:text-4xl">EMBERFEST</h2>
         </Link>
         <div className="flex flex-col items-center lg:items-end lg:pt-16 lg:ml-auto lg:mr-32 3xl:mr-72">
-          <h2 className="text-sm sm:text-base md:text-lg lg:text-5xl text-disabled lg:hidden">{metaData.emberDate}</h2>
-          <h2 className="text-sm sm:text-base md:text-lg lg:text-5xl text-disabled hidden lg:block">4. september <span className="text-black">{showTime}</span></h2>
+          <h2 className="text-sm sm:text-base md:text-lg lg:text-5xl text-disabled lg:hidden">{showDate} {(showTime !== "tba") && showTime}</h2>
+          <h2 className="text-sm sm:text-base md:text-lg lg:text-5xl text-disabled hidden lg:block">{showDate} <span className="text-black">{(showTime !== "tba") && showTime}</span></h2>
           <h3 className="text-xs sm:text-sm md:text-base lg:text-3xl text-disabled">{metaData.address}</h3>
           <div className="flex-col items-center hidden lg:flex lg:self-center">
             <h1 className="text-xl md:text-2xl uppercase mt-8 lg:text-5xl">{post.frontmatter.title} <sup className="lg:hidden text-sm md:text-lg">{showTime}</sup></h1>
@@ -83,7 +86,7 @@ export default function BandTemplate({ data }) {
         <div className="pt-4 lg:pt-0 w-4/5 lg:w-1/2 2xl:w-888 lg:h-500 text-justify lg:px-16 lg:flex flex-col justify-center 3xl:px-0 3xl:pr-16 2xl:ml-auto" dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
 
-      <Link to="/program/" className="mt-4 flex items-center opacity-50 hover:opacity-100 transition-opacity"><ArrowBackIcon /> back</Link>
+      <Link to="../" className="mt-4 flex items-center opacity-50 hover:opacity-100 transition-opacity"><ArrowBackIcon /> back</Link>
 
       <Pane colour="#C96480" initial={{height: "100vh", bottom: 0, top: "auto"}} animate={{height: 0, bottom: 0, top: "auto"}} exit={{height: "100vh", bottom: "auto"}}></Pane>
     </Layout>

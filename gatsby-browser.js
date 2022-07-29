@@ -9,9 +9,17 @@
 import "./src/css/style.css"
 import "@fontsource/chakra-petch"
 import "@fontsource/fira-sans/200.css"
+import moment from "moment"
+import 'moment/dist/locale/da';
+import localization from 'moment/locale/fr';
+
+
 
 import React from 'react';
 import {AnimatePresence} from 'framer-motion';
+
+// moment.locale("da")
+moment.updateLocale('da', localization);
 
 const transitionDelay = 600
 

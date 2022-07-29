@@ -3,7 +3,7 @@ title: Clapper
 showstart: 2021-09-04T14:30:00.000Z
 description: Hip-hop Jazz / Neo-soul jazz
 image:
-  - received_229219025583960_rijdlm.jpg
+  - https://res.cloudinary.com/embermusic-dk/image/upload/v1626266351/received_229219025583960_rijdlm.jpg
 ---
 Clapper blander lyden af gospelmusik fra den amerikanske vestkyst med moderne fusionsjazz. Et splinternyt skud på stammen af unikke aarhusianske musikere med iver for fornyelse af jazzgenren.
 Men de fire musikere er ikke nye på scenen. Flere af dem har spillet sammen i mange år, blandt andet i bandet Abekejser. Musikerne er desuden kendt fra grupper som Hvalfugl, Karmen Rõivassepp Quartet og Bangin’ Bülows Nice Jazz Quartet.

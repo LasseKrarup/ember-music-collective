@@ -49,10 +49,11 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    let templatePath = "./src/templates/bands.js"
-    if (/\/program\//g.test(node.fields.slug)) {
-      templatePath = "./src/templates/emberfest-bands.js"
-    }
+    // let templatePath = "./src/templates/bands.js"
+    // if (/\/program\//g.test(node.fields.slug)) {
+    //   templatePath = "./src/templates/emberfest-bands.js"
+    // }
+    let templatePath = "./src/templates/emberfest-bands.js"
     createPage({
       path: node.fields.slug,
       // Choose template to use for programatically created pages
