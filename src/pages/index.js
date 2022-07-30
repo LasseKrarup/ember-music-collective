@@ -68,11 +68,11 @@ const IndexPage = ({data}) => {
         </Paragraph>
   
         <Paragraph>
-          Der er gratis entré og en fed bar med gode fadøl fra <a href="https://www.erlings.dk/" target="_blank" rel="noreferrer" className="font-bold">Erling's Øl &amp; Jazzbar</a>, drinks og alt, der hører sig til. Du kan betale med kort, men ikke med MobilePay, så husk plastikkortet, Apple- eller Google Pay. Det er ikke tilladt at medbringe drikkevarer udefra.
+          Der er gratis entré og en fed bar med alt, der hører sig til. Du kan betale med kort, men ikke med MobilePay, så husk plastikkortet, Apple- eller Google Pay. Det er ikke tilladt at medbringe drikkevarer udefra.
         </Paragraph>
   
         <Paragraph>
-          <Link to="/program" className="font-bold">Tjek programmet ud</Link> og se, hvilke kunstnere der tager plads på scenen 4. september 2021 til Emberfest!
+          <Link to="program" className="font-bold">Tjek programmet ud</Link> og se, hvilke kunstnere der tager plads på scenen 10. september 2022 til Emberfest!
         </Paragraph>
       </motion.div>
 
