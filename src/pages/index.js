@@ -57,7 +57,7 @@ const IndexPage = ({data}) => {
       <div className="mt-12 sm:mt-12">
         <motion.ul variants={variantsParent} initial="initial" animate="animate" className="list-none uppercase text-2xl md:text-4xl text-center">
           <motion.li variants={variantsChildren} className="mb-4 hover:opacity-75 transition-opacity"><Link to="program/">Line up</Link></motion.li>
-          <motion.li variants={variantsChildren} className="mb-4 hover:opacity-75 transition-opacity"><a className="flex items-center" href="https://www.facebook.com/events/1623845561141329" target="_blank" rel="noreferrer">Event&nbsp;<FacebookIcon /></a></motion.li>
+          <motion.li variants={variantsChildren} className="mb-4 hover:opacity-75 transition-opacity"><a className="flex items-center" href="https://www.facebook.com/events/454763323224824/" target="_blank" rel="noreferrer">Event&nbsp;<FacebookIcon /></a></motion.li>
           <motion.li variants={variantsChildren} className="hover:opacity-75 transition-opacity"><Link to="2021">2021</Link></motion.li>
         </motion.ul>
       </div>
