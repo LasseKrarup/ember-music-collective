@@ -1,6 +1,6 @@
 ---
 title: OK Lykke
-showstart: ""
+showstart: 2022-09-10T13:30:00+02:00
 description: Instrumental nordisk bas-musik
 image:
   - https://res.cloudinary.com/embermusic-dk/image/upload/v1659186553/OkLykkeFoto_qd58vg.jpg
