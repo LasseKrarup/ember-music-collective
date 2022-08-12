@@ -3,7 +3,7 @@ title: Trope
 showstart: 2022-09-10T19:00:00.000Z
 description: Biilled-skabende dream pop
 image:
-  - https://res.cloudinary.com/embermusic-dk/image/upload/v1660288033/Trope_-_Pressebillede_4_-_Credits_Sally_Errebo_n5iram.tiff
+  - https://res.cloudinary.com/embermusic-dk/image/upload/v1660288033/Trope_-_Pressebillede_4_-_Credits_Sally_Errebo_n5iram.jpg
 ---
 Trope debuterede i marts 2021 med den anmelderroste EP ”I Billeder”. Et blændende lille mesterværk med et drømmende univers af stilsikre øjebliksbilleder og en poetisk melankolsk og til tider dyster lyrik krydret af en intelligent instrumental scenografi. I april kom opfølgeren ”Underklang” – en akustisk EP født ud fra en idé om at skabe musik til den stille stund, hvor der er tid til eftertænksomhed, refleksion og langsomhed. 
 
