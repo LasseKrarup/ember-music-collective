@@ -1,7 +1,7 @@
 ---
 title: Trope
 showstart: 2022-09-10T19:00:00.000Z
-description: Biilled-skabende dream pop
+description: Billed-skabende dream pop
 image:
   - https://res.cloudinary.com/embermusic-dk/image/upload/v1660288033/Trope_-_Pressebillede_4_-_Credits_Sally_Errebo_n5iram.jpg
 ---
