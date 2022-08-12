@@ -1,7 +1,7 @@
 ---
 title: Thoughtfool
 showstart: 2022-09-10T19:30:00+02:00
-description: Singer/songwriter
+description: Laid back indie rock
 image:
   - https://res.cloudinary.com/embermusic-dk/image/upload/v1659968865/DSC02625_wudayi.jpg
 ---
