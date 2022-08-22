@@ -3,7 +3,7 @@ title: Cesie
 showstart: 2022-09-10T14:30:00.000Z
 description: Singer/songwriter
 image:
-  - https://res.cloudinary.com/embermusic-dk/image/upload/v1661163344/CESIE_Oktober20_sarahbrik-5640_rhlo94.jpg
+  - https://res.cloudinary.com/embermusic-dk/image/upload/v1661165570/CESIE_Oktober20_sarahbrik-5640_rhlo94.jpg
 ---
 CESIE is an upcoming danish/british singer-songwriter, dedicated to writing
 melodic tales with direct references to her own personal life. Her clarified
