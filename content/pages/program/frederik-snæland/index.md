@@ -1,5 +1,5 @@
 ---
-title: Frederik Snæland
+title: Kid Empera
 showstart: 2022-09-10T13:00:00.000Z
 description: < coming soon >
 image:
