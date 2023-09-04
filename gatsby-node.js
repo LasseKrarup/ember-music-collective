@@ -36,7 +36,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // This is where the files for which to generate slugs are determined
   const result = await graphql(`
     query {
-      allMarkdownRemark (filter: {internal: {}, fileAbsolutePath: {glob: "/**/pages/**/*"}}) {
+      allMarkdownRemark (filter: { fileAbsolutePath: {glob: "**/pages/**/*"}}) {
         edges {
           node {
             fields {

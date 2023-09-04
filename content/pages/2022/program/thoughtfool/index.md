@@ -1,6 +1,6 @@
 ---
 title: Thoughtfool
-showstart: 
+showstart: 2022-09-10T19:30:00+02:00
 description: Laid back indie rock
 image:
   - https://res.cloudinary.com/embermusic-dk/image/upload/v1661440850/24CDACDC-9F02-4EFE-A4B0-806BA988C0DF_jgqaor.jpg
