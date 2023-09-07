@@ -13,3 +13,5 @@ Bandet, som henter inspiration til deres bandnavn fra en populær yoghurt-smag, 
 Med pære banal kan der forventes legesyg og minimalistisk post-punk med højt energiniveau, uventede stemningsskift og riffs der fanger øret på det forkerte ben. Bandet smadrer “sødt” derudaf med et glimt i øjet og energi nok til det dobbelte.
 
 pære banal udgav deres anden single “Halvt Liv” d. 18. August, fra deres kommende debutalbum med titlen “Wir Schaffen Das!?”. Albummet udgives til oktober på pladeselskabet Brise Bånd, digitalt og fysisk på kassettebånd.
+
+_📷: Maj Færgemann_
